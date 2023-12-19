@@ -21,18 +21,22 @@ struct Home: View {
                 KFImage(photoURL)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 68, height: 68)
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(20)
                     .padding([.bottom, .trailing], 4)
             }
             HStack{
                 Text("User Name : ")
-                Text(authentication.currentUser?.displayName ?? "none")
+                Text(authentication.currentUser?.displayName ?? "No User name found")
             }
             HStack{
                 Text("Email : ")
-                Text(authentication.currentUser?.email ?? "none")
+                Text(authentication.currentUser?.email ?? "No Email Found")
             }
-            
+            HStack{
+                Text("Phone Number : ")
+                Text(authentication.currentUser?.phoneNumber ?? "No Phone Number Found")
+            }
             Button{
                 isSignedOut = true
             }label: {

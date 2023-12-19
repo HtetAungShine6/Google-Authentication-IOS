@@ -34,18 +34,39 @@ struct LoginScreen: View {
                 .padding(.trailing, 24)
                 
                 CustomButton()
-                
-                
-                Text("or")
+                Text("-------------------- or --------------------")
                     .padding()
-                
-                GoogleSiginBtn {
-                    // TODO: - Call the sign method here
+                Button{
                     FirebAuth.share.signinWithGoogle(presenting: Application_utility.rootViewController) { error in
                         // TODO: Handle ERROR
                         print(error?.localizedDescription as Any)
                     }
-                } // GoogleSiginBtn
+                }label: {
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .cornerRadius(30)
+                            .shadow(color: .gray, radius: 6, x: 0, y: 2)
+                            .frame(maxWidth: 350, maxHeight: 60)
+                            .padding()
+                        HStack{
+                            Image("google")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 50, maxHeight: 50)
+                            Text("Continue with Google")
+                                .tint(Color.black)
+                                .font(.title3)
+                        }
+                    }
+                }
+//                GoogleSiginBtn {
+//                    // TODO: - Call the sign method here
+//                    FirebAuth.share.signinWithGoogle(presenting: Application_utility.rootViewController) { error in
+//                        // TODO: Handle ERROR
+//                        print(error?.localizedDescription as Any)
+//                    }
+//                } // GoogleSiginBtn
             } // VStack
             .padding(.top, 52)
             Spacer()

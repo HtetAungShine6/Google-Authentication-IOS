@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-//Dependency Injection for UI
+//Dependency Injection with UIViewController for UI
 final class Application_utility {
     static var rootViewController: UIViewController{
         guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else{
