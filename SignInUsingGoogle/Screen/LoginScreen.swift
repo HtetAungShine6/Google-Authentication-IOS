@@ -14,31 +14,36 @@ import Firebase
 struct LoginScreen: View {
     @State var username: String = ""
     @State var password: String = ""
+    @State private var isLoggedIn = false
     
     var body: some View {
         VStack {
             VStack {
-                LoginHeader()
-                    .padding(.bottom)
+                Text("events.au")
+                    .fontWeight(.bold)
+                    .font(.system(size: 24))
+                    .overlay(
+                        LinearGradient(gradient: Gradient(colors: [Color("red_primary"), Color("red_secondary")]), startPoint: .top, endPoint: .bottom)
+                            .mask(Text("events.au").fontWeight(.bold).font(.system(size: 24)))
+                    )
                 
-                CustomTextfield(text: $username)
-           
-                CustomTextfield(text: $username)
                 
-                HStack {
-                    Spacer()
-                    Button(action: {}) {
-                        Text("Forgot Password?")
-                    }
+                Image("OnBoardingPhoto")
+                    .resizable()
+                    .frame(width: 400, height: 400)
+                
+                NavigationLink(
+                    destination: isLoggedIn ? AnyView(Home()) : AnyView(SignUpView()),
+                    isActive: $isLoggedIn
+                ) {
+                    EmptyView()
                 }
-                .padding(.trailing, 24)
+
                 
-                CustomButton()
-                Text("-------------------- or --------------------")
-                    .padding()
                 Button{
-                    FirebAuth.share.signinWithGoogle(presenting: Application_utility.rootViewController) { error in
+                    FirebAuth.share.signinWithGoogle(presenting: Application_utility.rootViewController) { error,_  in
                         // TODO: Handle ERROR
+                        
                         print(error?.localizedDescription as Any)
                     }
                 }label: {
@@ -54,24 +59,22 @@ struct LoginScreen: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(maxWidth: 50, maxHeight: 50)
-                            Text("Continue with Google")
+                            Text("Sign In with Google")
                                 .tint(Color.black)
                                 .font(.title3)
+                                .fontWeight(.bold)
                         }
                     }
                 }
-//                GoogleSiginBtn {
-//                    // TODO: - Call the sign method here
-//                    FirebAuth.share.signinWithGoogle(presenting: Application_utility.rootViewController) { error in
-//                        // TODO: Handle ERROR
-//                        print(error?.localizedDescription as Any)
-//                    }
-//                } // GoogleSiginBtn
-            } // VStack
+            }
             .padding(.top, 52)
             Spacer()
         }
     }
+    
+//    func handleLogin() {
+//        isLoggedIn = UserManager.shared.isUserRegistered()
+//    }
 }
 
 
