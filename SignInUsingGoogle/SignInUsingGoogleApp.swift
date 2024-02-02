@@ -10,25 +10,31 @@ import SwiftUI
 @main
 struct SignInUsingGoogleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @AppStorage("signIn") var isSignIn = false
-    @AppStorage("isFirstTimeSignIn") var isFirstTimeSignIn = true
-    @State private var currentScreen: AppScreen = .login
+//    @AppStorage("signIn") var isSignIn = false
+//    @StateObject var vm = FirebAuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            switch currentScreen {
-            case .login:
-                LoginScreen()
-            case .home:
-                Home()
-            case .registration:
-                SignUpView()
-            }
+//            LoginScreen()
+            MLogin()
         }
     }
 }
 
-enum AppScreen {
-    case login
-    case home
-    case registration
-}
+////            ContentView()
+//            if isSignIn{
+//                Home()
+//            } else {
+//                LoginScreen()
+//            }
+//            if isSignIn{
+//                vm.signInWithGoogle(presenting: Application_utility.rootViewController){ error, isNewUser in
+//                    if isNewUser{
+//                        SignUpView()
+//                    }else{
+//                        Home()
+//                    }
+//                }
+//            }else{
+//                LoginScreen()
+//            }

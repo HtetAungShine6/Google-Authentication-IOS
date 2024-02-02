@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B36DEE892B303787005D1AEA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B36DEE882B303787005D1AEA /* Kingfisher */; };
+		B37D258F2B6C14FF00569A92 /* SignInWithMicrosoft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D258E2B6C14FF00569A92 /* SignInWithMicrosoft.swift */; };
+		B37D25912B6C17D000569A92 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D25902B6C17D000569A92 /* MHome.swift */; };
+		B37D25932B6C17E000569A92 /* MLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D25922B6C17E000569A92 /* MLogin.swift */; };
 		B37DAE8F2B2AE7FA00B18181 /* SignInUsingGoogleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAE8E2B2AE7FA00B18181 /* SignInUsingGoogleApp.swift */; };
 		B37DAE932B2AE7FC00B18181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37DAE922B2AE7FC00B18181 /* Assets.xcassets */; };
 		B37DAE962B2AE7FC00B18181 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37DAE952B2AE7FC00B18181 /* Preview Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B37D258E2B6C14FF00569A92 /* SignInWithMicrosoft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithMicrosoft.swift; sourceTree = "<group>"; };
+		B37D25902B6C17D000569A92 /* MHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
+		B37D25922B6C17E000569A92 /* MLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLogin.swift; sourceTree = "<group>"; };
 		B37DAE8B2B2AE7FA00B18181 /* SignInUsingGoogle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInUsingGoogle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37DAE8E2B2AE7FA00B18181 /* SignInUsingGoogleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUsingGoogleApp.swift; sourceTree = "<group>"; };
 		B37DAE922B2AE7FC00B18181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				B37DAEB42B2AF30800B18181 /* ViewModel.swift */,
 				B37DAEC72B2B355B00B18181 /* Application_utility.swift */,
 				B3A7B2852B3CC85300B9B44F /* FactViewModel.swift */,
+				B37D258E2B6C14FF00569A92 /* SignInWithMicrosoft.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +165,8 @@
 				B37DAEBC2B2AF5C200B18181 /* LoginScreen.swift */,
 				B3A7B28A2B3CC95A00B9B44F /* SignUpView.swift */,
 				B3A7B28F2B3D2BFD00B9B44F /* OnBoardingScreen1.swift */,
+				B37D25902B6C17D000569A92 /* MHome.swift */,
+				B37D25922B6C17E000569A92 /* MLogin.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A7B2902B3D2BFE00B9B44F /* OnBoardingScreen1.swift in Sources */,
+				B37D25932B6C17E000569A92 /* MLogin.swift in Sources */,
 				B3A7B28E2B3CD07700B9B44F /* UserDataManager.swift in Sources */,
 				B37DAEA92B2AECA500B18181 /* AppDelegate.swift in Sources */,
 				B37DAEB52B2AF30800B18181 /* ViewModel.swift in Sources */,
@@ -296,6 +306,8 @@
 				B3A7B28B2B3CC95A00B9B44F /* SignUpView.swift in Sources */,
 				B3A7B2862B3CC85300B9B44F /* FactViewModel.swift in Sources */,
 				B3A7B2892B3CC88D00B9B44F /* Unit.swift in Sources */,
+				B37D25912B6C17D000569A92 /* MHome.swift in Sources */,
+				B37D258F2B6C14FF00569A92 /* SignInWithMicrosoft.swift in Sources */,
 				B37DAEC22B2AF62400B18181 /* CustomTextfield.swift in Sources */,
 				B37DAEC82B2B355B00B18181 /* Application_utility.swift in Sources */,
 			);
